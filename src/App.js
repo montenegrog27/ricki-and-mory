@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card/Card';
+import Cards from './components/Cards/Cards';
+import characters from './data';
 
-function App() {
+
+function App () {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className='App' style={{ padding: '25px' }}>
+      <div>
+        <Card
+        onClose={() => window.alert('Emulamos que se cierra la card')}/>
+      </div>
+      <hr />
 
-export default App;
+      <div>
+        <Cards character = {characters}/>
+      </div> 
+
+      <hr />
+       {/* <div>
+        <SearchBar/>
+      </div>  */}
+    </div> 
+  )
+  }
+
+export default App
