@@ -1,27 +1,28 @@
 import './App.css';
 import Card from './components/Card/Card';
+import SearchBar from './components/SearchBar/SearchBar';
 import Cards from './components/Cards/Cards';
 import characters from './data';
 
 
 function App () {
-  
+    function onClose () {
+      window.alert ("Emulamos que se cierra la card")
+    }
+
+    function searchHandler (){
+      window.alert ("El personaje que quiero buscar")
+    }
   return (
     <div className='App' style={{ padding: '25px' }}>
-      {/* <div>
-        <Card
-        onClose={() => window.alert('Emulamos que se cierra la card')}/>
-      </div> */}
-      <hr />
-
       <div>
-        <Cards characters = {characters}/>
+        <Cards characters = {characters} onClose ={onClose}/>
       </div> 
 
       <hr />
-       {/* <div>
-        <SearchBar/>
-      </div>  */}
+       <div>
+        <SearchBar onSearch = {searchHandler}/>
+      </div> 
     </div> 
   )
   }
