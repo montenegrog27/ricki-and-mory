@@ -1,0 +1,33 @@
+.componente {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:rgb(80, 230, 88);
+    width: 100%;
+    border: 1px solid rgb(47, 206, 47);
+    border-radius: 10px;
+    padding:20px;
+    cursor: pointer;
+}
+.imagen{
+    position:relative;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.name{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+.atributes{
+
+}
