@@ -1,16 +1,19 @@
+import Card from "../Card/Card"
 
 export default function Cards(props) {
-   // const { character } = props; // para no poner props.character.map
+   const { characters } = props;
 
    return (
       <div className="App">
-      {props.character.map((char)=>{
-         return(
-       <div className='App' style={{ padding: '25px' }}>
-         {char.name} {char.gender} {char.species} {<img src={char.image}/>}
-      </div>
-         )
+      {characters.map((character)=>{
+         <Card character = {character}/>
    })}
       </div>
    )
 }
+
+// return(
+//    <div className='App' style={{ padding: '25px' }}>
+//      {char.name} {char.gender} {char.species} {<img src={char.image}/>}
+//   </div>
+//      )

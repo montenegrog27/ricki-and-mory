@@ -8,14 +8,14 @@ function App () {
   
   return (
     <div className='App' style={{ padding: '25px' }}>
-      <div>
+      {/* <div>
         <Card
         onClose={() => window.alert('Emulamos que se cierra la card')}/>
-      </div>
+      </div> */}
       <hr />
 
       <div>
-        <Cards character = {characters}/>
+        <Cards characters = {characters}/>
       </div> 
 
       <hr />
