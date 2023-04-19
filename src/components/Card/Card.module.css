@@ -10,6 +10,14 @@
     padding:16px;
     cursor: pointer;
     border: solid 3px;
+    transition: 0.3s;
+}
+.componente:hover{
+    background-color: rgb(88, 255, 97);
+    color:black;
+    border-color: rgb(0, 224, 37);
+    border-style:outset;
+    margin-bottom: 30px;
 }
 .imagen{
     position:relative;
