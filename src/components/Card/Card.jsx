@@ -10,7 +10,7 @@ export default function Card(props) {
             { <button className={style.button} onClick ={onClose}  >X</button> }
          </div>
          <div className={style.atributes}>
-         <h2>Name: {character.name}</h2>
+            <h2>Name: {character.name}</h2>
             <h2>Species:{character.species}</h2>
             <h2>Gender:{character.gender}</h2>
          </div>

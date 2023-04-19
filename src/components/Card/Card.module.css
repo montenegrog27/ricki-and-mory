@@ -7,21 +7,39 @@
     width: 100%;
     border: 1px solid rgb(47, 206, 47);
     border-radius: 10px;
-    padding:20px;
+    padding:16px;
     cursor: pointer;
+    border: solid 3px;
 }
 .imagen{
     position:relative;
     text-align: center;
     display: inline-block;
     margin-bottom: 5px;
+    border-radius: 20px;
 }
+
 
 .button{
     position: absolute;
     top: 5px;
     right: 5px;
+    background-color: rgb(55, 167, 21);
+    color:white;
+    width: 35px;
+    height: 25px;
+    border-radius: 5px;
+    font-size:medium;
+    font-family: Helvetica;
 }
+.button:hover{
+    width: 40px;
+    height: 30px;
+    margin-top: -3px;
+    margin-right: -3px;
+    transition: 0.3s;
+}
+
 
 .name{
     position: absolute;

@@ -46,7 +46,3 @@
 .input1:hover {
     background-color: rgb(85, 85, 85);
 }
-
-/* .input1:not(:hover) {
-    transition-duration: 0.3s;
-} */
