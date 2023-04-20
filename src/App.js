@@ -1,5 +1,5 @@
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
+import NavBar from './components/NavBar/NavBar';
 import Cards from './components/Cards/Cards';
 import characters from './data';
 
@@ -13,11 +13,12 @@ function App () {
       window.alert ("El personaje que quiero buscar")
     }
   return (
-    <div className='App'>
-        <SearchBar onSearch = {searchHandler}/>
+    <>
+      <div className='App'>
+        <NavBar onSearch = {searchHandler}/>
         <Cards characters = {characters} onClose ={onClose}/>
-
-    </div> 
+      </div> 
+    </>
   )
   }
 

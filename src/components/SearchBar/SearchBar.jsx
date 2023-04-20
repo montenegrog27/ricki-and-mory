@@ -1,6 +1,6 @@
 import style from "./SearchBar.module.css"
 
-export default function SearchBar(props) {
+function SearchBar(props) {
    return (
       <div className={style.searchBar}>
          <input className={style.input1} type='search' />
@@ -8,3 +8,5 @@ export default function SearchBar(props) {
       </div>
    );
 }
+
+export default SearchBar

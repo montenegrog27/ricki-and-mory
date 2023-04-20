@@ -14,6 +14,20 @@ const characters = [
     image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
   },
   {
+    id: 3,
+    name: "Summer Smith",
+    species: "Human",
+    gender: "Female",
+    image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+  },
+  {
+    id: 3,
+    name: "Summer Smith",
+    species: "Human",
+    gender: "Female",
+    image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+  },
+  {
     id: 4,
     name: "Beth Smith",
     species: "Human",

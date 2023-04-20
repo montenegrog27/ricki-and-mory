@@ -11,13 +11,14 @@
     cursor: pointer;
     border: solid 3px;
     transition: 0.3s;
+    margin-top: -100px;
 }
 .componente:hover{
     background-color: rgb(88, 255, 97);
     color:black;
     border-color: rgb(0, 224, 37);
     border-style:outset;
-    margin-bottom: 30px;
+
 }
 .imagen{
     position:relative;
@@ -36,7 +37,7 @@
     color:white;
     width: 35px;
     height: 25px;
-    border-radius: 5px;
+    border-radius: 70px;
     font-size:medium;
     font-family: Helvetica;
 }

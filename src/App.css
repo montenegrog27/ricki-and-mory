@@ -13,9 +13,7 @@
    align-items: center;
    background-color: rgb(20, 20, 20);
    background-image: url("./assets/logo.png");
-   /* background-position: top center -10px;  */
    background-repeat: no-repeat;
-   /* background-size: 95% auto; */
    background-position: center 20px ; 
    padding-top:5px;
 
