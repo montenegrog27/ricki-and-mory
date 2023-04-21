@@ -10,17 +10,24 @@ function App () {
 
 
 
-    function searchHandler(character) {
-      fetch(`https://rickandmortyapi.com/api/character/${character}`)
+    function searchHandler(id) {
+
+    let found1 = characters.find((c)=>c.id===Number(id))
+
+    if (!found1){
+      fetch(`https://rickandmortyapi.com/api/character/${id}`)
          .then((response) => response.json())
          .then((data) => {
             if (data.name) {
-               setCharacters((oldChars) => [...oldChars, data]);
+               setCharacters((oldChars) => [data,...oldChars]);
             } else {
                window.alert('No hay personajes con ese ID');
             }
          });
+   }else {window.alert('El personaje ya fue agregado')
+
    }
+  }
     function onClose(id) {
       let found = characters.find((characters)=>characters.id===id)
       let deleted = characters.filter(characters=>characters.id !== found.id);
