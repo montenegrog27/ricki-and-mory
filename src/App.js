@@ -8,9 +8,7 @@ function App () {
     const [characters, setCharacters] = useState ([])
 
 
-    function onClose(index) {
-      
-    }
+
 
     function searchHandler(character) {
       fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -23,6 +21,11 @@ function App () {
             }
          });
    }
+    function onClose(id) {
+      let found = characters.find((characters)=>characters.id===id)
+      let deleted = characters.filter(characters=>characters.id !== found.id);
+      setCharacters(deleted)
+    }
 
 
   return (
