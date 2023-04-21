@@ -40,14 +40,34 @@
     border-radius: 70px;
     font-size:medium;
     font-family: Helvetica;
+    cursor: pointer;
 }
 .button:hover{
-    width: 40px;
-    height: 30px;
-    margin-top: -3px;
-    margin-right: -3px;
-    transition: 0.3s;
+    width: 70px;
+    height: 35px;
+    margin-right: -15px;
+    margin-top: -5px;
+    transition: 0.2s;
+
+
 }
+
+.button:hover::before {
+    content:'Cerrar';
+    position:absolute;
+    background-color: rgb(55, 167, 21);   
+    text-align: center; 
+    align-items: center;
+    margin-left: -17px;
+    transition: 0.6s;
+    transition-delay: 1s;
+    /* opacity: 0; */
+    /* transition: opacity 0.5s ease-out 0.5s; */
+
+  }
+.button:not(:hover) {
+    transition: 0.2s; 
+  }
 
 
 .name{
