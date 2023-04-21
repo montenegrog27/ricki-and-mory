@@ -5,11 +5,11 @@ import { useState } from 'react';
 
 
 function App () {
-    const [characters, setCharacters] = useState ([{}])
+    const [characters, setCharacters] = useState ([])
 
 
-    function onClose () {
-      window.alert ("Emulamos que se cierra la card")
+    function onClose(index) {
+      
     }
 
     function searchHandler(character) {
