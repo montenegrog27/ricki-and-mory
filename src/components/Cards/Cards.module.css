@@ -1,6 +1,6 @@
 .componentes {
     margin-bottom: 20px;
-    margin-top: -150px;
+    margin-top: 450px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 150px;
@@ -10,4 +10,5 @@
     padding-left: 40px;
     padding-right: 60px;
     align-items: center;
+
     }

@@ -1,9 +1,9 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Cards from './components/Cards/Cards';
-import Portada from './components/Portada/Portada';
 import { useState } from 'react';
-
+import { Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 function App () {
     const [characters, setCharacters] = useState ([])
@@ -33,9 +33,11 @@ function App () {
   return (
     <>
       <div className='App'>
-        <Portada/>
+        {/* <Route path='./' Component={NavBar}></Route> */}
+        {/* <Routes> */}
         <NavBar onSearch = {searchHandler}/>
         <Cards characters = {characters} onClose ={onClose}/>
+        {/* </Routes> */}
       </div> 
     </>
   )

@@ -1,10 +1,16 @@
 import SearchBar from "../SearchBar/SearchBar"
 import style from "./NavBar.module.css"
+import Portada from "../Portada/Portada"
 
 function NavBar(props) {
     return (
     <div className={style.NavBar}>
-        <SearchBar onSearch = {props.onSearch}/>
+        <div className={style.Portada}>
+            <Portada />
+        </div>
+        <div className={style.searchBar}>
+            <SearchBar onSearch = {props.onSearch}/>
+        </div>
     </div>
     )
 }

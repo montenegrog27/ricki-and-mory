@@ -1,7 +1,34 @@
 .NavBar {
-    background-color: rgb(53, 63, 63);
+    background-color: rgb(95, 65, 65);
     display: flex;
-    margin-bottom: 300px;
+    
+    justify-content: right;
+    margin-bottom: 400px;
     width: 100%;
-    height: 100px;
+    height: 100px; 
+
+
+}
+.Portada{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    height: 330px;
+    margin-top: -15px;
+
+}
+.searchBar{
+    background-color: rgb(98, 102, 102);
+    display: flex;
+    position:sticky;
+    justify-content: right;
+    margin-top: 320px;
+    width: 100%;
+    height: 90px;
+    top: 100px;
+    z-index: 10;
+
+
 }
