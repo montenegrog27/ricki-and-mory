@@ -33,11 +33,8 @@ function App () {
   return (
     <>
       <div className='App'>
-        {/* <Route path='./' Component={NavBar}></Route> */}
-        {/* <Routes> */}
         <NavBar onSearch = {searchHandler}/>
         <Cards characters = {characters} onClose ={onClose}/>
-        {/* </Routes> */}
       </div> 
     </>
   )

@@ -1,7 +1,7 @@
 .searchBar {
-    margin-top:30px;
+    margin-top:15px;
     width: 100%;
-    height: 30%;
+    height: 40%;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -11,8 +11,8 @@
 .button1 {
     font-size: larger;   
     font-family: Helvetica, sans-serif;
-    width: 100px;
-    height: 50px;
+    width: 90px;
+    height: 30px;
     color:green;
     /* display: flex;
     justify-content: center; */
@@ -37,11 +37,12 @@
 
 .input1 {
     font-size: larger;   
-    width: 350px;
-    height: 50px;
+    width: 220px;
+    height: 30px;
     color: white;
     display: flex;
     justify-content: center;
+    text-align: center;
     border-radius: 50px;
     margin-right: 5px;
     background-color: rgb(49, 49, 49);

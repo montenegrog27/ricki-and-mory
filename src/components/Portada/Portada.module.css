@@ -1,7 +1,10 @@
 .portada {
    background-image: url("../../assets/logo.png");
    background-repeat: no-repeat;
-   background-position: center 20px ; 
-   width: 300px;
-   height: 340px;
+   background-position: center 10px ; 
+   background-size: contain;
+   width: 260px;
+   height: 300px;
+   /* margin-top: 20px; */
+   z-index: 10;
 }
