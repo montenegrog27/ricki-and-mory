@@ -36,6 +36,7 @@ function App () {
         <NavBar onSearch = {searchHandler}/>
         <Cards characters = {characters} onClose ={onClose}/>
       </div> 
+      
     </>
   )
   }
