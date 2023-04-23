@@ -1,0 +1,122 @@
+
+.img_container {
+    background-color: aqua;
+    height: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+  }
+  
+  .Landing {
+    margin-top: 160px;
+    width: 550px;
+    margin-left:-20px
+  }
+
+  
+  .boton {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 100px;
+    border-radius: 150px;
+    transition: 0.3s;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    /* margin-bottom: 100px;
+    padding-top: 50px; */
+    background-color: rgb(106, 247, 41);
+    padding-top: 20px;
+    margin:auto auto 50px auto;
+
+}
+
+  .boton:hover{
+    /* height: 85px;
+    width: 85px;
+    margin-bottom: -4px;
+    margin-right: 3px; */
+    /* background-color: rgb(102, 255, 42); */
+    cursor:pointer;
+    /* opacity: 1; */
+    background-color: rgb(81, 255, 0);
+    
+  }
+
+  /* .texto{
+    justify-content:center ;
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 255, 50);
+    border-radius: 50px;
+    width: 100px;
+    height: 50px;
+    padding-top:35px;
+    margin-left:100px
+  } */
+
+  .image_hover{
+      background-image: url('../assets/Portada.png');
+  background-repeat: no-repeat;
+  background-position: center 10px ; 
+  background-size: contain;
+  width: 500px;
+  margin:auto;
+  }
+
+/* /////// */
+  
+/* .img_container {
+    background-color: aqua;
+    height: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .Landing {
+    margin-top: 190px;
+  }
+  
+  .boton {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    transition: 0.3s;
+    border: none;
+  }
+
+  .boton:hover{
+    height: 85px;
+    width: 85px;
+    margin-bottom: -4px;
+    margin-right: 3px;
+    background-color: rgb(102, 255, 42);
+    cursor:pointer;
+
+    
+  }
+
+  .texto{
+    color: rgb(61, 61, 61);
+  }
+
+  .image_hover{
+      background-image: url('../assets/Portada.png');
+  background-repeat: no-repeat;
+  background-position: center 10px ; 
+  background-size: contain;
+  } */
