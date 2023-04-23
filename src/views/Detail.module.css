@@ -1,0 +1,30 @@
+.cardConteiner{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 600px;
+    margin-top: 100px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.imageConteiner1{
+    border-radius: 20px 20px 30px 30px;
+    border: solid rgb(30, 255, 42);
+    background-color: rgb(18, 212, 0);
+    display: flex;
+    justify-content: center;
+    padding-top:15px;
+    margin-left: 650px;
+    padding-bottom:50px;
+    margin-top:-415px;
+    width: 340px;
+    height: 340px;
+
+}
+
+.imagen{
+    width: 300px;
+}
