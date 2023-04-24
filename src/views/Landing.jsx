@@ -10,7 +10,7 @@ function Landing(){
          <div className={style.img_conteiner}>
         <img src={LogoRM} alt="" className={style.Landing} />
         <div className={style.boton}>
-            <Link to='/home'>INGRESAR</Link>
+            <Link to='/home' className={style.ingresar}>INGRESAR</Link>
         </div>
     </div>
     </div>

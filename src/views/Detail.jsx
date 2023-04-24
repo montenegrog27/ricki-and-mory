@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import style from './Detail.module.css'
+
 
 
 function Detail () {
@@ -31,6 +32,10 @@ function Detail () {
 
     return(
         <>
+        <div className={style.nav}>
+        <Link to='/home' className={style.home}>Home</Link>
+        <Link to='/about' className={style.about}>About</Link>
+        </div>
         <div className={style.cardConteiner}>
             <div className={style.name}>
                 <h3>Name</h3>

@@ -26,13 +26,14 @@
     height: 50px;
     width: 100px;
     border-radius: 150px;
-    transition: 0.3s;
+    transition: 0.2s;
     border: none;
     background-color: transparent;
     text-align: center;
     /* margin-bottom: 100px;
     padding-top: 50px; */
-    background-color: rgb(106, 247, 41);
+    background-color: rgb(28, 194, 206);
+    border: solid 2px greenyellow;
     padding-top: 20px;
     margin:auto auto 50px auto;
 
@@ -46,8 +47,27 @@
     /* background-color: rgb(102, 255, 42); */
     cursor:pointer;
     /* opacity: 1; */
-    background-color: rgb(81, 255, 0);
+    background-color: rgb(15, 144, 153);
+    border: solid 2px rgb(141, 212, 35);
+    /* background-color: rgb(81, 255, 0); */
     
+  }
+  .ingresar{
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(32, 32, 32);
+    /* border:solid 1x rgb(46, 46, 46); */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif  ;
+    transition:0.2s;
+    background-color:transparent;
+    width: 20px;
+    padding: 23px 13px 30px 13px;
+    border-radius: 30px;
+    
+  }
+  .ingresar:hover{
+    font-weight: 1000;
+    color: rgb(0, 0, 0);
   }
 
   /* .texto{
@@ -70,53 +90,3 @@
   margin:auto;
   }
 
-/* /////// */
-  
-/* .img_container {
-    background-color: aqua;
-    height: 650px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .Landing {
-    margin-top: 190px;
-  }
-  
-  .boton {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 80px;
-    width: 80px;
-    border-radius: 50px;
-    transition: 0.3s;
-    border: none;
-  }
-
-  .boton:hover{
-    height: 85px;
-    width: 85px;
-    margin-bottom: -4px;
-    margin-right: 3px;
-    background-color: rgb(102, 255, 42);
-    cursor:pointer;
-
-    
-  }
-
-  .texto{
-    color: rgb(61, 61, 61);
-  }
-
-  .image_hover{
-      background-image: url('../assets/Portada.png');
-  background-repeat: no-repeat;
-  background-position: center 10px ; 
-  background-size: contain;
-  } */
