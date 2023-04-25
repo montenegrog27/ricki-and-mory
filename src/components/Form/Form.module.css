@@ -1,0 +1,46 @@
+.form{
+    /* display: flex; */
+    /* width: 100%; */
+    padding-left: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelEmail{
+    color: rgb(0, 199, 10);
+    padding-right: 4px;
+    margin-left: 27px;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.labelPassword{
+    color: rgb(0, 199, 10);
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.login{
+    /* display:flex; */
+    margin-bottom: 50px;
+    margin-left: 280px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+.succes {
+    border: 2px solid rgb(0, 199, 10);
+}
+
+.errors{
+    border:2px solid red;
+}
+
+.spanEmail{
+    color:red;
+    margin-left: 5px;
+}
+.spanPassword{
+    color:red;
+    margin-left: 5px;
+}
