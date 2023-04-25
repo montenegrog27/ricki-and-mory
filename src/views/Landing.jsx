@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom';
 import LogoRM from '../assets/logo.png'
 import style from './Landing.module.css'
+import Form from '../components/Form/Form';
 
 
 
 function Landing(){
     return(
         <div className={style.image_hover}>
-         <div className={style.img_conteiner}>
-        <img src={LogoRM} alt="" className={style.Landing} />
+            <div className={style.img_conteiner}>
+            <img src={LogoRM} alt="" className={style.Landing} />
         <div className={style.boton}>
             <Link to='/home' className={style.ingresar}>INGRESAR</Link>
         </div>
+        <Form/>
     </div>
     </div>
 )}
