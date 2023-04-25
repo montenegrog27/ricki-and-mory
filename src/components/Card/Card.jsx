@@ -16,7 +16,7 @@ export default function Card(props) {
 
          </div>
          <div className={style.atributes}>
-         <Link to={`/detail/${character.id}`} >
+         <Link to={`/detail/${character.id}`} className={style.link}>
             <h2 className={style.cardName}>Name: {character.name}</h2>
          </Link>
             

@@ -7,9 +7,9 @@ import { Link } from "react-router-dom"
 function NavBar(props) {
     return (
     <div className={style.NavBar}>
-        <div>
-            <Link to='/home'>Home</Link>
-            <Link to='/about'>About</Link>
+        <div className={style.nav}>
+        <Link to='/home' className={style.home}>Home</Link>
+        <Link to='/about' className={style.about}>About</Link>
         </div>
         <div className={style.Portada}>
             <Portada />
