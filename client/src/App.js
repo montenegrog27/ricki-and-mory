@@ -11,10 +11,13 @@ import Landing from './views/Landing';
 function App () {
     const [characters, setCharacters] = useState ([])
 
+
+     
     function searchHandler(id) {
     let found1 = characters.find((c)=>c.id===Number(id))
     if (!found1){
-      fetch(`https://rickandmortyapi.com/api/character/${id}`)
+      fetch(`http://localhost:3001/rickandmorty/character/${id}`) // mi servidor 
+      // fetch(`https://rickandmortyapi.com/api/character/${id}`) // la api de R&M
          .then((response) => response.json())
          .then((data) => {
             if (data.name) {
