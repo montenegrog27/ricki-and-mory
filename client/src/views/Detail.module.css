@@ -1,74 +1,110 @@
-.cardConteiner{
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-    margin-left: 30%;
-    margin-right: 600px;
-    margin-top: 100px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+.todo {
+  /* background-color: red; */
+  padding-bottom: 155px;
+  background-image: url(../assets/pngwing.com.png);
+  /* background-image: url(../assets/pngwing.com.png); */
+  background-repeat: no-repeat;
+  /* background-position: bottom 50px; */
+  background-size: contain;
+  background-size: 200px;
+  background-position: bottom;
 }
-.imageConteiner1{
-    border-radius: 20px 20px 30px 30px;
-    border: solid rgb(30, 255, 42);
-    background-color: rgb(18, 212, 0);
-    display: flex;
-    justify-content: center;
-    padding-top:15px;
-    margin-left: 650px;
-    padding-bottom:50px;
-    margin-top:-415px;
-    width: 340px;
-    height: 340px;
-
+.todo1 {
+  /* background-color: red; */
+  /* padding-bottom: 155px; */
+  background-image: url(../assets/pngwing.com1.png);
+  background-repeat: no-repeat;
+  /* background-position: bottom 50px; */
+  background-size: contain;
+  background-size: 280px;
+  background-position: bottom;
+  background-position-x: left;
+  background-position-y: 200px;
 }
-
-.imagen{
-    width: 300px;
-}
-
-.nav{
-    background-color: rgb(49, 49, 49);
-    height: 40px;
-    display: flex;
-    justify-content:space-evenly;
-    /* padding-top: 5px; */
-    padding-bottom: 5px;
+.todo2 {
+  /* background-color: red; */
+  /* padding-bottom: 155px; */
+  background-image: url(../assets/pngwing.com3.png);
+  background-repeat: no-repeat;
+  /* background-position: bottom 50px; */
+  background-size: contain;
+  background-size: 280px;
+  background-position: bottom;
+  background-position-x: right;
+  background-position-y: 250px;
 }
 
-.home{
-    background-color: rgb(51, 173, 51);
-    border-radius: 15px;
-    width: 60px;
-    text-align: center;
-    padding-top: 3px;
-
-    margin-top: 15px;
-    color: rgb(240, 240, 240);
-    text-decoration-line: none;
-    font-weight: 500;
-    font-family: Helvetica, sans-serif;
+.cardConteiner {
+  background-color: rgb(18, 212, 0);
+  border: solid rgb(30, 255, 42);
+  border-radius: 20px 20px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 710px;
+  margin-top: 100px;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
-.about{
-    background-color: rgb(51, 173, 51);
-    border-radius: 15px;
-    width: 60px;
-    text-align: center;
-    padding-top: 3px;
-    margin-top: 15px;
-    color: rgb(240, 240, 240);
-    text-decoration-line: none;
-    font-weight: 500;
-    font-family: Helvetica, sans-serif;
+.imageConteiner1 {
+  border-radius: 20px 20px 30px 30px;
+  border: solid rgb(30, 255, 42);
+  background-color: rgb(18, 212, 0);
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  margin-left: 680px;
+  padding-bottom: 55px;
+  margin-top: -340px;
+  width: 300px;
+  height: 265px;
+}
 
+.imagen {
+  width: 300px;
+}
+
+.nav {
+  background-color: rgb(49, 49, 49);
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  /* padding-top: 5px; */
+  padding-bottom: 5px;
+}
+
+.home {
+  background-color: rgb(51, 173, 51);
+  border-radius: 15px;
+  width: 60px;
+  text-align: center;
+  padding-top: 3px;
+
+  margin-top: 15px;
+  color: rgb(240, 240, 240);
+  text-decoration-line: none;
+  font-weight: 500;
+  font-family: Helvetica, sans-serif;
+}
+.about {
+  background-color: rgb(51, 173, 51);
+  border-radius: 15px;
+  width: 60px;
+  text-align: center;
+  padding-top: 3px;
+  margin-top: 15px;
+  color: rgb(240, 240, 240);
+  text-decoration-line: none;
+  font-weight: 500;
+  font-family: Helvetica, sans-serif;
 }
 .about:hover {
-    border:solid 2px rgb(102, 230, 43);
-    background-color: rgb(61, 189, 2);
+  border: solid 2px rgb(102, 230, 43);
+  background-color: rgb(61, 189, 2);
 }
 .home:hover {
-    border:solid 2px rgb(102, 230, 43);
-    background-color: rgb(61, 189, 2);
+  border: solid 2px rgb(102, 230, 43);
+  background-color: rgb(61, 189, 2);
 }
