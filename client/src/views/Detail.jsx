@@ -6,10 +6,12 @@ import style from "./Detail.module.css";
 function Detail() {
   const [character, setCharacter] = useState([]);
 
-  const { id } = useParams(); // este numero viene en forma de string
-
+  // const { id } = useParams(); // este numero viene en forma de string
+  const params = useParams();
+  console.log(params.id);
   useEffect(() => {
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+    fetch(`http://localhost:3001/rickandmorty/character/${params.id}`)
+      // fetch(`https://rickandmortyapi.com/api/character/${id}`)
       .then((response) => response.json())
       .then((char) => {
         if (char.name) {
@@ -22,7 +24,7 @@ function Detail() {
         window.alert("No hay personajes con ese ID");
       });
     return setCharacter({});
-  }, [id]);
+  }, [params.id]);
 
   return (
     <>
