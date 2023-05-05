@@ -79,14 +79,13 @@
   top: 50%;
 } */
 .atributes {
-  /* padding-top: 150px; */
   font-size: x-small;
   text-align: center;
   text-decoration: none;
 }
 
 .cardName {
-  background-color: rgba(255, 0, 0, 0.326);
+  /* background-color: rgba(255, 0, 0, 0.326); */
   width: 180px;
   height: 120px;
   margin-top: 30px;
@@ -98,7 +97,7 @@
 .link {
   text-decoration-line: none;
   color: rgb(80, 230, 88);
-  background-color: red;
+  /* background-color: red; */
 }
 .link:hover {
   color: rgb(1, 1, 1);
