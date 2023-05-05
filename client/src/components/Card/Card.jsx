@@ -19,7 +19,7 @@ export default function Card(props) {
       </div>
       <div className={style.atributes}>
         <Link to={`/detail/${id}`} className={style.link}>
-          {/* <Link to={`/detail/${character.id}`} className={style.link}>//cambio por props.id */}
+          {/* <Link to={`/detail/${character.id}`} className={style.link}>//cambio por id */}
           <h2 className={style.cardName}>Name: {character.name}</h2>
         </Link>
 

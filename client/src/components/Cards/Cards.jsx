@@ -1,7 +1,7 @@
 import style from "./Cards.module.css";
 import Card from "../Card/Card";
 
-export default function Cards(props) {
+function Cards(props) {
   return (
     <div className={style.componentes}>
       {props.characters.map((character) => (
@@ -15,3 +15,5 @@ export default function Cards(props) {
     </div>
   );
 }
+
+export default Cards;
