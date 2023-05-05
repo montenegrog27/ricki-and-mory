@@ -1,11 +1,33 @@
 import style from "./Card.module.css";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { addFavorites, deleteFavorites } from "../../redux/actions";
+import { useState } from "react";
 
-export default function Card(props) {
-  const { character, onClose } = props;
+function Card(props) {
+  const { character, onClose, addFavorites, deleteFavorites } = props;
   const id = character.id; //lo agregue con pol
+
+  const [isFav, setIsFav] = useState(false);
+
+  //?crear funcion handleFavorite aca:
+  function handleFavorite(data) {
+    if (isFav === true) {
+      deleteFavorites(data);
+      setIsFav(false);
+    } else {
+      addFavorites(data);
+      setIsFav(true);
+    }
+  }
+
   return (
     <div className={style.componente}>
+      {isFav ? (
+        <button onClick={() => handleFavorite(character.id)}>❤️</button>
+      ) : (
+        <button onClick={() => handleFavorite(character)}>🤍</button>
+      )}
       <div className={style.imagen}>
         {<img src={character.image} alt={""} className={style.imge} />}
         {
@@ -29,3 +51,15 @@ export default function Card(props) {
     </div>
   );
 }
+// const maapStateToProps = (state) => {
+//   myFavorites: state.myFavorites;
+// };
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addFavorites: (character) => dispatch(addFavorites(character)),
+    deleteFavorites: (id) => dispatch(deleteFavorites(id)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Card);
