@@ -1,76 +1,105 @@
-.texto{
-    text-align: center;
-    padding-top: 50px;
-    transition: 3s;
-    /* background-color: red; */
-    height: 550px;
-    background-image: url(../assets/Rick1.png);
-    background-repeat: no-repeat;
-    background-position: center 50px ; 
-    background-size: contain;
-    background-size: 700px;
-    background-position: bottom;
+.texto {
+  text-align: center;
+  padding-top: 50px;
+  transition: 3s;
+  /* background-color: red; */
+  height: 550px;
+  background-image: url(../assets/Rick1.png);
+  background-repeat: no-repeat;
+  background-position: center 50px;
+  background-size: contain;
+  background-size: 700px;
+  background-position: bottom;
 }
 
-.h1{
-    /* background-color: rgb(34, 202, 1); */
-    border-radius: 50px 50px 0px 0px;
-    width: 700px;
-    margin:auto;
-    color: white;
+.h1 {
+  /* background-color: rgb(34, 202, 1); */
+  border-radius: 50px 50px 0px 0px;
+  width: 700px;
+  margin: auto;
+  color: white;
 }
-.h2{
-    /* background-color: rgb(34, 202, 1); */
-    border-radius: 0px 0px 50px 50px;
-    width: 700px;
-    height: 100px;
-    text-align: center;
-    padding-top:30px;
-    margin:auto;
-    color: antiquewhite;
-
+.h2 {
+  /* background-color: rgb(34, 202, 1); */
+  border-radius: 0px 0px 50px 50px;
+  width: 700px;
+  height: 100px;
+  text-align: center;
+  padding-top: 30px;
+  margin: auto;
+  color: antiquewhite;
 }
-.nav{
-    background-color: rgb(49, 49, 49);
-    height: 40px;
-    display: flex;
-    justify-content:space-evenly;
-    /* padding-top: 5px; */
-    padding-bottom: 5px;
+.nav {
+  background-color: rgb(49, 49, 49);
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  /* padding-top: 5px; */
+  padding-bottom: 5px;
 }
 
-.home{
-    background-color: rgb(51, 173, 51);
-    border-radius: 15px;
-    width: 60px;
-    text-align: center;
-    padding-top: 3px;
+.home {
+  background-color: rgb(51, 173, 51);
+  border-radius: 15px;
+  width: 60px;
+  text-align: center;
+  padding-top: 3px;
 
-    margin-top: 15px;
-    color: rgb(240, 240, 240);
-    text-decoration-line: none;
-    font-weight: 500;
-    font-family: Helvetica, sans-serif;
+  margin-top: 15px;
+  color: rgb(240, 240, 240);
+  text-decoration-line: none;
+  font-weight: 500;
+  font-family: Helvetica, sans-serif;
 }
-.about{
-    background-color: rgb(51, 173, 51);
-    border-radius: 15px;
-    width: 60px;
-    text-align: center;
-    padding-top: 3px;
-    margin-top: 15px;
-    color: rgb(240, 240, 240);
-    text-decoration-line: none;
-    font-weight: 500;
-    font-family: Helvetica, sans-serif;
-
+.fav {
+  background-color: rgb(51, 173, 51);
+  border-radius: 15px;
+  width: 60px;
+  text-align: center;
+  padding-top: 3px;
+  margin-top: 15px;
+  color: rgb(240, 240, 240);
+  text-decoration-line: none;
+  font-weight: 500;
+  font-family: Helvetica, sans-serif;
+}
+.fav:hover {
+  border: solid 2px rgb(102, 230, 43);
+  background-color: rgb(61, 189, 2);
+}
+.logout {
+  background-color: rgb(51, 173, 51);
+  border-radius: 15px;
+  width: 60px;
+  text-align: center;
+  padding-top: 3px;
+  margin-top: 15px;
+  color: rgb(240, 240, 240);
+  text-decoration-line: none;
+  font-weight: 500;
+  font-family: Helvetica, sans-serif;
+}
+.logout:hover {
+  border: solid 2px rgb(102, 230, 43);
+  background-color: rgb(61, 189, 2);
+}
+.about {
+  background-color: rgb(51, 173, 51);
+  border-radius: 15px;
+  width: 60px;
+  text-align: center;
+  padding-top: 3px;
+  margin-top: 15px;
+  color: rgb(240, 240, 240);
+  text-decoration-line: none;
+  font-weight: 500;
+  font-family: Helvetica, sans-serif;
 }
 .about:hover {
-    border:solid 2px rgb(102, 230, 43);
-    background-color: rgb(61, 189, 2);
+  border: solid 2px rgb(102, 230, 43);
+  background-color: rgb(61, 189, 2);
 }
 .home:hover {
-    border:solid 2px rgb(102, 230, 43);
-    background-color: rgb(61, 189, 2);
+  border: solid 2px rgb(102, 230, 43);
+  background-color: rgb(61, 189, 2);
 }
-

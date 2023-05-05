@@ -1,11 +1,10 @@
 .portada {
-   background-image: url("../../assets/logo.png");
-   background-repeat: no-repeat;
-   background-position: center 10px ; 
-   background-size: contain;
-   margin-top: -50px;
-   width: 260px;
-   height: 300px;
-   /* margin-top: 20px; */
-   z-index: 10;
+  background-image: url("../../assets/logo.png");
+  background-repeat: no-repeat;
+  background-position: center 10px;
+  background-size: contain;
+  background-color: rgba(255, 0, 0, 0.548);
+  margin-top: -50px;
+  width: 240px;
+  height: 150px;
 }

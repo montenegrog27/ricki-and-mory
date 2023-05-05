@@ -1,57 +1,55 @@
 .searchBar {
-    margin-top:15px;
-    width: 100%;
-    height: 40%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin-right: 50px;
+  margin-top: 15px;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 50px;
 }
 
 .button1 {
-    font-size: larger;   
-    font-family: Helvetica, sans-serif;
-    width: 90px;
-    height: 30px;
-    color:green;
-    /* display: flex;
+  font-size: larger;
+  font-family: Helvetica, sans-serif;
+  width: 90px;
+  height: 30px;
+  color: green;
+  /* display: flex;
     justify-content: center; */
-    text-align: center;
-    border-radius: 50px;
-    border-style: hidden;
-    background-color: rgb(51, 173, 51);
-    border-color: rgb(2, 99, 6);
-    color:white;
-    transition: background-color 0.2s ease-in-out;
+  text-align: center;
+  border-radius: 50px;
+  border-style: hidden;
+  background-color: rgb(51, 173, 51);
+  border-color: rgb(2, 99, 6);
+  color: white;
+  transition: background-color 0.2s ease-in-out;
 }
 .button1:hover {
- background-color: rgb(24, 139, 1);
+  background-color: rgb(24, 139, 1);
 
- border-color:rgb(0, 0, 0);
- transition: .2s;
- border-style: double;
- border-color: chartreuse;
-
+  border-color: rgb(0, 0, 0);
+  transition: 0.2s;
+  border-style: double;
+  border-color: chartreuse;
 }
 
-
 .input1 {
-    font-size: larger;   
-    width: 220px;
-    height: 30px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    border-radius: 50px;
-    margin-right: 5px;
-    background-color: rgb(49, 49, 49);
-    transition: background-color 0.2s ease-in-out;
-    border-style:hidden;
-    border-color: chartreuse;
+  font-size: larger;
+  width: 220px;
+  height: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50px;
+  margin-right: 5px;
+  background-color: rgb(49, 49, 49);
+  transition: background-color 0.2s ease-in-out;
+  border-style: hidden;
+  border-color: chartreuse;
 }
 
 .input1:hover {
-    background-color: rgb(85, 85, 85);
-    border-style: double;
+  background-color: rgb(85, 85, 85);
+  border-style: double;
 }

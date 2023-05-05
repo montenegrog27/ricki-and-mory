@@ -10,8 +10,14 @@ function NavBar(props) {
         <Link to="/home" className={style.home}>
           Home
         </Link>
+        <Link to="/favorites" className={style.favorites}>
+          Fav
+        </Link>
         <Link to="/about" className={style.about}>
           About
+        </Link>
+        <Link to="/logout" className={style.logout}>
+          Logout
         </Link>
       </div>
       <div className={style.Portada}>

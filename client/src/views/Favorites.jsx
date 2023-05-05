@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import style from "./About.module.css";
+import style from "../views/Favorites.module.css";
+import { connect } from "react-redux";
+import Cards from "../components/Cards/Cards";
 
-function About() {
+function Favorites({ myFavorites }) {
   return (
     <>
       <div className={style.nav}>
@@ -18,15 +20,16 @@ function About() {
           Logout
         </Link>
       </div>
-      <div className={style.texto}>
-        <h1 className={style.h1}>Hola! Soy German Montenegro</h1>
-        <h2 className={style.h2}>
-          Soy estudiante de desarrollo Web Full Stack, y este es mi proyecto
-          integrador
-        </h2>
+      <div className={style.cards}>
+        <Cards characters={myFavorites} />
       </div>
     </>
   );
 }
 
-export default About;
+const mapStateToProps = (state) => {
+  return {
+    myFavorites: state.myFavorites,
+  };
+};
+export default connect(mapStateToProps, null)(Favorites);

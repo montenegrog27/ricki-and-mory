@@ -3,12 +3,29 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addFavorites, deleteFavorites } from "../../redux/actions";
 import { useState } from "react";
+import { useEffect } from "react";
 
 function Card(props) {
-  const { character, onClose, addFavorites, deleteFavorites } = props;
-  const id = character.id; //lo agregue con pol
+  const { character, onClose, addFavorites, deleteFavorites, myFavorites } =
+    props;
 
+  const id = character.id; //lo agregue con pol
+  const [closeBtn, setCloseBtn] = useState(true);
   const [isFav, setIsFav] = useState(false);
+
+  useEffect(() => {
+    if (!onClose) {
+      setCloseBtn(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    myFavorites.forEach((fav) => {
+      if (fav.id === character.id) {
+        setIsFav(true);
+      }
+    });
+  }, [myFavorites]);
 
   //?crear funcion handleFavorite aca:
   function handleFavorite(data) {
@@ -24,20 +41,30 @@ function Card(props) {
   return (
     <div className={style.componente}>
       {isFav ? (
-        <button onClick={() => handleFavorite(character.id)}>❤️</button>
+        <button
+          className={style.botFavOn}
+          onClick={() => handleFavorite(character.id)}
+        >
+          ❤️
+        </button>
       ) : (
-        <button onClick={() => handleFavorite(character)}>🤍</button>
+        <button
+          className={style.botFavOff}
+          onClick={() => handleFavorite(character)}
+        >
+          🤍
+        </button>
       )}
       <div className={style.imagen}>
         {<img src={character.image} alt={""} className={style.imge} />}
-        {
+        {closeBtn ? (
           <button
             className={style.button}
             onClick={() => onClose(character.id)}
           >
             X
           </button>
-        }
+        ) : null}
       </div>
       <div className={style.atributes}>
         <Link to={`/detail/${id}`} className={style.link}>
@@ -51,9 +78,12 @@ function Card(props) {
     </div>
   );
 }
-// const maapStateToProps = (state) => {
-//   myFavorites: state.myFavorites;
-// };
+
+const maapStateToProps = (state) => {
+  return {
+    myFavorites: state.myFavorites,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -62,4 +92,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(Card);
+export default connect(maapStateToProps, mapDispatchToProps)(Card);
