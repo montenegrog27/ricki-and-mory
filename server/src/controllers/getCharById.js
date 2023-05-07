@@ -28,13 +28,12 @@ function getCharById(req, res) {
   axios
     .get(`${URL}${id}`)
     .then((response) => {
-      const { id, name, gender, species, origin, image, status } =
-        response.data;
-      const character = { id, name, gender, species, origin, image, status };
+      const { name, gender, species, origin, image, status } = response.data;
+      const character = { name, gender, species, origin, image, status };
       if (character.name) {
         res.status(200).json(character);
       } else res.status(404).send("Not Found");
-      res.json(character);
+      // res.json(character);
     })
     .catch((error) => {
       res.status(500).json({ message: error.message });

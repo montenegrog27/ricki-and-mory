@@ -8,6 +8,8 @@ import { useState } from "react";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import Landing from "./views/Landing";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -33,6 +35,21 @@ function App() {
     let found = characters.find((characters) => characters.id === id);
     let deleted = characters.filter((characters) => characters.id !== found.id);
     setCharacters(deleted);
+  }
+
+  //!Aca deberia estar una funcion "login" que la vamos a eliminar para la hw de express
+  const navigate = useNavigate();
+  const [access, setAccess] = useState(false);
+
+  //?hw de express(nuevo logini) copisteamos la funcinon q nos mandan en la hw
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = "http://localhost:3001/rickandmorty/login/";
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+      const { access } = data;
+      setAccess(data);
+      access && navigate("/home");
+    });
   }
 
   return (
