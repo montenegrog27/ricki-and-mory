@@ -1,7 +1,9 @@
-import { ADD_FAVORITES, DELETE_FAVORITES } from "./actions";
+import { ADD_FAVORITES, DELETE_FAVORITES } from "../redux/actions"
+
 
 const initialState = {
   myFavorites: [],
+  allCharacters : []
 };
 
 const rootReducer = (state = initialState, action) => {

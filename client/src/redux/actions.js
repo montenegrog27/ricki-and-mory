@@ -46,4 +46,6 @@ const deleteFavorites = (id) => {
     });
   };
 };
+
+
 export { ADD_FAVORITES, addFavorites, DELETE_FAVORITES, deleteFavorites };
