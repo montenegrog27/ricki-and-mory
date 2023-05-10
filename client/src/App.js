@@ -57,7 +57,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/about" element={<About />} />
-          <Route exact path="/" element={<Landing />} />
+          <Route exact path="/" element={<Landing login={login} />} />
           <Route
             path="/home"
             element={

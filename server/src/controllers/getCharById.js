@@ -29,9 +29,11 @@ function getCharById(req, res) {
     .get(`${URL}${id}`)
     .then((response) => {
       const { name, gender, species, origin, image, status } = response.data;
-      const character = { name, gender, species, origin, image, status };
+      const character = { id, name, gender, species, origin, image, status };
+      // console.log(character.id);
       if (character.name) {
         res.status(200).json(character);
+        console.log(character);
       } else res.status(404).send("Not Found");
       // res.json(character);
     })

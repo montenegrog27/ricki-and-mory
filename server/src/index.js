@@ -40,6 +40,9 @@ const server = express();
 const PORT = 3001;
 const router = require("../src/routes/index");
 
+//?configurar middleware express.json para traducir del formato json a obj:
+server.use(express.json());
+
 //?traido de la hw
 server.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -51,9 +54,6 @@ server.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
-
-//?configurar middleware express.json para traducir del formato json a obj:
-server.use(express.json());
 
 //? Crear ruta hacia router, para que router ejecute las otras rutas:
 server.use("/rickandmorty", router);
