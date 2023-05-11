@@ -20,7 +20,6 @@ function deleteFav(req, res) {
   myFavorites = filtered;
   res.status(200).json(myFavorites);
 }
-console.log(myFavorites);
 
 
 module.exports = { postFav, deleteFav };

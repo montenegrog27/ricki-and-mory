@@ -40,7 +40,6 @@ const deleteFavorites = (id) => {
 
   return (dispatch) => {
     axios.delete(endpoint).then(({ data }) => {
-      console.log(data);
       return dispatch({
         type: DELETE_FAVORITES,
         payload: data.data,
