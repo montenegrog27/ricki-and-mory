@@ -14,23 +14,45 @@ import { useNavigate } from "react-router-dom";
 function App() {
   const [characters, setCharacters] = useState([]);
 
-  function searchHandler(id) {
-    let found1 = characters.find((c) => c.id === Number(id));
-    if (!found1) {
-      fetch(`http://localhost:3001/rickandmorty/character/${id}`) // mi servidor
-        // fetch(`https://rickandmortyapi.com/api/character/${id}`) // la api de R&M
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.name) {
-            setCharacters((oldChars) => [data, ...oldChars]);
-          } else {
-            window.alert("No hay personajes con ese ID");
-          }
-        });
-    } else {
-      window.alert("El personaje ya fue agregado");
+  //! Vamos a comentar esta funcion searchHandler para hacer la hw de async await
+  // function searchHandler(id) {
+  //   let found1 = characters.find((c) => c.id === Number(id));
+  //   if (!found1) {
+  //     fetch(`http://localhost:3001/rickandmorty/character/${id}`) // mi servidor
+  //       // fetch(`https://rickandmortyapi.com/api/character/${id}`) // la api de R&M
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         if (data.name) {
+  //           setCharacters((oldChars) => [data, ...oldChars]);
+  //         } else {
+  //           window.alert("No hay personajes con ese ID");
+  //         }
+  //       });
+  //   } else {
+  //     window.alert("El personaje ya fue agregado");
+  //   }
+  // }
+
+  async function searchHandler(id) {
+    id.preventDefault();
+    try {
+      let found1 = characters.find((c) => c.id === Number(id));
+      if (!found1) {
+        const response = (
+          await axios.get(`http://localhost:3001/rickandmorty/character/${id}`)
+        ).data;
+
+        if (response.name) {
+          setCharacters((oldChars) => [data, ...oldChars]);
+        }
+      } else {
+        window.alert("No hay personajes con ese ID");
+      }
+    } catch (error) {
+      alert(error.message);
     }
   }
+
   function onClose(id) {
     let found = characters.find((characters) => characters.id === id);
     let deleted = characters.filter((characters) => characters.id !== found.id);
@@ -57,7 +79,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/about" element={<About />} />
-          <Route exact path="/" element={<Landing />} />
+          <Route exact path="/" element={<Landing login={login} />} />
           <Route
             path="/home"
             element={
