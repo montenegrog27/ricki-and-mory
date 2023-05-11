@@ -37,11 +37,13 @@ const addFavorites = (character) => {
 // ACTION | removeFav
 const deleteFavorites = (id) => {
   const endpoint = "http://localhost:3001/rickandmorty/fav/" + id;
+
   return (dispatch) => {
     axios.delete(endpoint).then(({ data }) => {
+      console.log(data);
       return dispatch({
         type: DELETE_FAVORITES,
-        payload: data,
+        payload: data.data,
       });
     });
   };

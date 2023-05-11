@@ -34,7 +34,8 @@ function App() {
   // }
 
   async function searchHandler(id) {
-    id.preventDefault();
+    // e.preventDefault();
+    console.log ("aca viene search")
     try {
       let found1 = characters.find((c) => c.id === Number(id));
       if (!found1) {
@@ -43,7 +44,7 @@ function App() {
         ).data;
 
         if (response.name) {
-          setCharacters((oldChars) => [data, ...oldChars]);
+          setCharacters((oldChars) => [response, ...oldChars]);
         }
       } else {
         window.alert("No hay personajes con ese ID");

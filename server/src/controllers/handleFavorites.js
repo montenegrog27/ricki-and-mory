@@ -19,7 +19,8 @@ function deleteFav(req, res) {
   //? Para sustituir el arreglo hacemos:
   myFavorites = filtered;
   res.status(200).json(myFavorites);
-  console.log(myFavorites);
 }
+console.log(myFavorites);
+
 
 module.exports = { postFav, deleteFav };

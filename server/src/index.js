@@ -39,6 +39,8 @@ const express = require("express");
 const server = express();
 const PORT = 3001;
 const router = require("../src/routes/index");
+const cors = require('cors');
+
 
 //?traido de la hw
 server.use((req, res, next) => {
@@ -54,6 +56,9 @@ server.use((req, res, next) => {
 
 //?configurar middleware express.json para traducir del formato json a obj:
 server.use(express.json());
+
+server.use(cors());
+
 
 //? Crear ruta hacia router, para que router ejecute las otras rutas:
 server.use("/rickandmorty", router);
