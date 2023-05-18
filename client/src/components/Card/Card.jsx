@@ -9,7 +9,9 @@ function Card(props) {
   const { character, onClose, addFavorites, deleteFavorites, myFavorites } =
     props;
 
-  const id = character.id; //lo agregue con pol
+  console.log("CHARACTER.ID:", character.id);
+
+  const id = character.id;
   const [closeBtn, setCloseBtn] = useState(true);
   const [isFav, setIsFav] = useState(false);
 
@@ -21,7 +23,7 @@ function Card(props) {
 
   useEffect(() => {
     myFavorites.forEach((fav) => {
-      if (fav.id === character.id) {
+      if (fav.id === id) {
         setIsFav(true);
       }
     });
@@ -40,18 +42,12 @@ function Card(props) {
 
   return (
     <div className={style.componente}>
-      {isFav ? (
-        <button
-          className={style.botFavOn}
-          onClick={() => handleFavorite(character.id)}
-        >
+      {isFav ? ( //cuando es true se ejecuta handleFavorite
+        <button className={style.botFavOn} onClick={() => handleFavorite(id)}>
           ❤️
         </button>
       ) : (
-        <button
-          className={style.botFavOff}
-          onClick={() => handleFavorite(character)}
-        >
+        <button className={style.botFavOff} onClick={() => handleFavorite(id)}>
           🤍
         </button>
       )}

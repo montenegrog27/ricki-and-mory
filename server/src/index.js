@@ -40,10 +40,10 @@ const server = express();
 const PORT = 3001;
 const router = require("../src/routes/index");
 
-//?configurar middleware express.json para traducir del formato json a obj:
+//? Configurar middleware express.json para traducir del formato json a obj:
 server.use(express.json());
 
-//?traido de la hw
+//? Traido de la hw
 server.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Credentials", "true");

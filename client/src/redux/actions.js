@@ -16,6 +16,7 @@ const addFavorites = (character) => {
   const endpoint = "http://localhost:3001/rickandmorty/fav";
   return (dispatch) => {
     axios.post(endpoint, character).then(({ data }) => {
+      console.log("DATA:", data);
       return dispatch({
         type: ADD_FAVORITES,
         payload: data,

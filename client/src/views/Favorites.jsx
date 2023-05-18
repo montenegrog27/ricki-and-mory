@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Cards from "../components/Cards/Cards";
 
 function Favorites({ myFavorites }) {
+  console.log("MyFavorite::", myFavorites);
   return (
     <>
       <div className={style.nav}>

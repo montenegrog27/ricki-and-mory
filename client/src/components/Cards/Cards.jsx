@@ -7,10 +7,10 @@ export default function Cards(props) {
     <div className={style.componentes}>
       {characters.map((character) => (
         <Card
-          key={props.id}
-          id={props.id} //agregado con pol
+          key={character.id}
+          id={character.id}
           character={character}
-          onClose={props.onClose}
+          onClose={character.onClose}
         />
       ))}
     </div>
