@@ -4,8 +4,10 @@ import { connect } from "react-redux";
 import { addFavorites, deleteFavorites } from "../../redux/actions";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Card(props) {
+  const navigate = useNavigate();
   const { character, onClose, addFavorites, deleteFavorites, myFavorites } =
     props;
 
@@ -47,7 +49,10 @@ function Card(props) {
           ❤️
         </button>
       ) : (
-        <button className={style.botFavOff} onClick={() => handleFavorite(id)}>
+        <button
+          className={style.botFavOff}
+          onClick={() => handleFavorite(character)}
+        >
           🤍
         </button>
       )}
