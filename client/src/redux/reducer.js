@@ -4,7 +4,6 @@ const initialState = {
   myFavorites: [],
   allCharacters: [],
 };
-console.log(initialState);
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -21,9 +20,14 @@ const rootReducer = (state = initialState, action) => {
     //   };
     //! Modificando lo q nos pasaron en hw
     case ADD_FAVORITES:
+      // return {
+      //   ...state,
+      //   myFavorites: [...state.myFavorites, action.payload],
+      //   allCharacters: action.payload,
+      // }; Cambio por el de sol
       return {
         ...state,
-        myFavorites: [...state.myFavorites, action.payload],
+        myFavorites: action.payload,
         allCharacters: action.payload,
       };
 
@@ -38,7 +42,12 @@ const rootReducer = (state = initialState, action) => {
     //!Copiamos el caso delete_fav que ellos nos dan:
     // REDUCER | REMOVE_FAV
     case DELETE_FAVORITES:
-      return { ...state, myFavorites: action.payload };
+      // return { ...state, myFavorites: action.payload }; cambio por el de sol
+      return {
+        ...state,
+        myFavorites: action.payload,
+        allCharacters: action.payload,
+      };
 
     default:
       return { ...state };

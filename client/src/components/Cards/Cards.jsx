@@ -2,7 +2,7 @@ import style from "./Cards.module.css";
 import Card from "../Card/Card";
 
 export default function Cards(props) {
-  const { characters } = props;
+  const { characters, onClose } = props;
   return (
     <div className={style.componentes}>
       {characters.map((character) => (
@@ -10,7 +10,7 @@ export default function Cards(props) {
           key={character.id}
           id={character.id}
           character={character}
-          onClose={character.onClose}
+          onClose={onClose}
         />
       ))}
     </div>

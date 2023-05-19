@@ -39,9 +39,11 @@ const express = require("express");
 const server = express();
 const PORT = 3001;
 const router = require("../src/routes/index");
+const cors = require("cors");
 
 //? Configurar middleware express.json para traducir del formato json a obj:
 server.use(express.json());
+server.use(cors());
 
 //? Traido de la hw
 server.use((req, res, next) => {
