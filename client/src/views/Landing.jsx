@@ -3,7 +3,7 @@ import LogoRM from "../assets/logo.png";
 import style from "./Landing.module.css";
 import Form from "../components/Form/Form";
 
-function Landing(props) {
+function Landing({ login }) {
   return (
     <div className={style.image_hover}>
       <div className={style.img_conteiner}>
@@ -13,7 +13,7 @@ function Landing(props) {
             INGRESAR
           </Link>
         </div>
-        <Form login={props.login} />
+        <Form login={login} />
       </div>
     </div>
   );

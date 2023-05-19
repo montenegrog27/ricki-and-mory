@@ -13,11 +13,11 @@ const validate = (form, setErrors, errors) => {
     else setErrors({ ...errors, email: "Email invalido" });
   }
 
-  // if(!form.password) setErrors({...errors,password:"Password vacio"})
-  // else setErrors({...errors,password:""})
+  if (!form.password) setErrors({ ...errors, password: "Password vacio" });
+  else setErrors({ ...errors, password: "" });
 };
 
-function Form() {
+function Form({ login }) {
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -28,19 +28,22 @@ function Form() {
   });
 
   function handleChange(event) {
+    event.preventDefault();
     const property = event.target.name;
     const value = event.target.value;
 
     setForm({ ...form, [property]: value });
     validate({ ...form, [property]: value }, setErrors, errors);
   }
+
   function submitHandler(event) {
     event.preventDefault();
-    alert("gege");
+    console.log("que onda");
+    login(form);
   }
 
   return (
-    <form className={style.form} onSubmit={submitHandler}>
+    <form className={style.form} type="submit">
       <div>
         <label htmlFor="email" className={style.labelEmail}>
           {" "}
@@ -69,7 +72,7 @@ function Form() {
         />
         <span className={style.spanPassword}>{errors.password}</span>
       </div>
-      <button type="submit" className={style.login}>
+      <button className={style.login} onClick={submitHandler}>
         LOGIN
       </button>
     </form>

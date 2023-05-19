@@ -10,9 +10,12 @@ import { Route } from "react-router-dom";
 import Landing from "./views/Landing";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const location = useLocation();
 
   //! Vamos a comentar esta funcion searchHandler para hacer la hw de async await
   // function searchHandler(id) {
@@ -62,6 +65,8 @@ function App() {
   //!Aca deberia estar una funcion "login" que la vamos a eliminar para la hw de express
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
+  // const username = "german@gmail.com";
+  // const password1 = "123456";
 
   //?hw de express(nuevo logini) copisteamos la funcinon q nos mandan en la hw
   function login(userData) {
@@ -69,10 +74,14 @@ function App() {
     const URL = "http://localhost:3001/rickandmorty/login/";
     axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
       const { access } = data;
+      console.log(data);
       setAccess(data);
       access && navigate("/home");
     });
   }
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
 
   return (
     <>
