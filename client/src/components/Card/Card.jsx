@@ -57,7 +57,6 @@ function Card(props) {
         </button>
       )}
       <div className={style.imagen}>
-        {<img src={character.image} alt={""} className={style.imge} />}
         {closeBtn ? (
           <button
             className={style.button}
@@ -66,6 +65,7 @@ function Card(props) {
             X
           </button>
         ) : null}
+        {<img src={character.image} alt={""} className={style.imge} />}
       </div>
       <div className={style.atributes}>
         <Link to={`/detail/${id}`} className={style.link}>

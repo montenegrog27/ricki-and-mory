@@ -24,7 +24,7 @@
 }
 
 .imagen {
-  position: flex;
+  /* position: flex; */
   text-align: center;
   display: inline-block;
   margin-bottom: 5px;
@@ -35,9 +35,10 @@
 
 .button {
   position: flex;
-  margin-top: -185px;
+  /* padding-top: -15px; */
+  margin-bottom: 5px;
   margin-left: 160px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   background-color: rgb(55, 167, 21);
   color: white;
@@ -59,25 +60,19 @@
 
 .button:hover::before {
   content: "Cerrar";
+  margin-left: -16px;
   position: absolute;
   background-color: rgb(55, 167, 21);
   text-align: center;
   align-items: center;
-  margin-top: 2px;
+  /* margin-top: px; */
   transition: 0.6s;
   transition-delay: 1s;
-  /* opacity: 0; */
-  /* transition: opacity 0.5s ease-out 0.5s; */
 }
 .button:not(:hover) {
   transition: 0.2s;
 }
 
-/* .name {
-  display: absolute;
-  width: 100%;
-  top: 50%;
-} */
 .atributes {
   font-size: x-small;
   text-align: center;
@@ -85,25 +80,24 @@
 }
 
 .cardName {
-  /* background-color: rgba(255, 0, 0, 0.326); */
-  width: 180px;
-  height: 120px;
+  /* background-color: red; */
+  /* width: 80px; */
+  /* height: 120px; */
   margin-top: 30px;
-  margin-bottom: -95px;
+  /* margin-bottom: -95px; */
   text-align: center;
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
 
 .link {
   text-decoration-line: none;
   color: rgb(80, 230, 88);
-  /* background-color: red; */
 }
 .link:hover {
   color: rgb(1, 1, 1);
 }
 .botFavOn {
-  position: flex;
+  /* position: flex; */
   margin-right: 120px;
   margin-top: -10px;
   background-color: transparent;
@@ -111,7 +105,7 @@
   font-size: large;
 }
 .botFavOff {
-  position: flex;
+  /* position: flex; */
   margin-right: 120px;
   margin-top: -10px;
   background-color: transparent;
