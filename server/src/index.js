@@ -41,6 +41,10 @@ const PORT = 3001;
 const router = require("../src/routes/index");
 const cors = require("cors");
 
+//? hw de sequelize 1 . Importar conn y sequelize
+const { conn } = require("./DB_connections");
+// const sequelize1 = require("./DB_connections");
+
 //? Configurar middleware express.json para traducir del formato json a obj:
 server.use(express.json());
 server.use(cors());
@@ -60,6 +64,10 @@ server.use((req, res, next) => {
 //? Crear ruta hacia router, para que router ejecute las otras rutas:
 server.use("/rickandmorty", router);
 
-server.listen(PORT, () => {
-  console.log("Server raised in port: " + PORT);
+//? sincronizamos para hw de sequelize:
+
+conn.sync({ force: true }).then(() => {
+  server.listen(PORT, () => {
+    console.log("Server raised in port: " + PORT);
+  });
 });
