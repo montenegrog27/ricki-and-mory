@@ -2,22 +2,6 @@ import { useState } from "react";
 import style from "./Form.module.css";
 import { validate } from "../../utils/validation";
 
-// const validate = (form, setErrors, errors) => {
-//   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/.test(form.email))
-//     setErrors({ ...errors, email: "" });
-//   else setErrors({ ...errors, email: "Email invalido" });
-
-//   if (!form.email) setErrors({ ...errors, email: "Email vacio" });
-//   else {
-//     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/.test(form.email))
-//       setErrors({ ...errors, email: "" });
-//     else setErrors({ ...errors, email: "Email invalido" });
-//   }
-
-//   if (!form.password) setErrors({ ...errors, password: "Password vacio" });
-//   else setErrors({ ...errors, password: "" });
-// };
-
 function Form({ login }) {
   const [form, setForm] = useState({
     email: "",

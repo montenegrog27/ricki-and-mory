@@ -16,7 +16,7 @@ function NavBar(props) {
         <Link to="/about" className={style.about}>
           About
         </Link>
-        <Link to="/logout" className={style.logout}>
+        <Link to="/" className={style.logout}>
           Logout
         </Link>
       </div>

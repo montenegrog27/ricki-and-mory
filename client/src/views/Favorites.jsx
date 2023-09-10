@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import style from "../views/Favorites.module.css";
-import { connect } from "react-redux";
 import Cards from "../components/Cards/Cards";
+import { useSelector } from "react-redux";
 
-function Favorites({ myFavorites }) {
-  console.log("MyFavorite::", myFavorites);
+const Favorites = () => {
+  const favorites = useSelector((state) => state.myFavorites);
+
   return (
     <>
       <div className={style.nav}>
@@ -22,15 +23,15 @@ function Favorites({ myFavorites }) {
         </Link>
       </div>
       <div className={style.cards}>
-        <Cards characters={myFavorites} />
+        <Cards characters={favorites} />
       </div>
     </>
   );
-}
-
-const mapStateToProps = (state) => {
-  return {
-    myFavorites: state.myFavorites,
-  };
 };
-export default connect(mapStateToProps, null)(Favorites);
+
+// const mapStateToProps = (state) => {
+//   return {
+//     myFavorites: state.myFavorites,
+//   };
+// };
+export default Favorites;
