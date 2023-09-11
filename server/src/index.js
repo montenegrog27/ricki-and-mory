@@ -66,7 +66,7 @@ server.use("/rickandmorty", router);
 
 //? sincronizamos para hw de sequelize:
 
-conn.sync({ force: true }).then(() => {
+conn.sync({ alter: true }).then(() => {
   server.listen(PORT, () => {
     console.log("Server raised in port: " + PORT);
   });

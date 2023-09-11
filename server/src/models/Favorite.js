@@ -23,7 +23,7 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       origin: {
-        type: DataTypes.STRING,
+        type: DataTypes.JSON,
         allowNull: false,
       },
       species: {

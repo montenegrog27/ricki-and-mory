@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import LogoRM from "../assets/logo.png";
 import style from "./Landing.module.css";
-import Form from "../components/Form/Form";
 
-function Landing({ login }) {
+function Landing() {
   return (
     <div className={style.image_hover}>
       <div className={style.img_conteiner}>
@@ -13,7 +12,6 @@ function Landing({ login }) {
             INGRESAR
           </Link>
         </div>
-        <Form login={login} />
       </div>
     </div>
   );
@@ -21,18 +19,3 @@ function Landing({ login }) {
 export default Landing;
 
 // /////////
-
-// import LogoRM from '../assets/logo.png'
-// import style from './Landing.module.css'
-
-// function Landing(){
-//     return(
-//         <div className={style.image_hover}>
-//          <div className={style.img_conteiner}>
-//         <img src={LogoRM} alt="" className={style.Landing} />
-//         <button className={style.boton}>
-//             <h4 className={style.texto}>INGRESAR</h4></button>
-//     </div>
-//     </div>
-// )}
-// export default Landing;

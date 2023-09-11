@@ -8,29 +8,16 @@ import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Landing from "./views/Landing";
 import axios from "axios";
 
+import { Amplify } from "aws-amplify";
+import { Authenticator } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
+import awsExports from "./aws-exports";
+Amplify.configure(awsExports);
+
 function App() {
   const [characters, setCharacters] = useState([]);
   const [searchString, setSearchString] = useState("");
   const location = useLocation();
-
-  //! Vamos a comentar esta funcion searchHandler para hacer la hw de async await
-  // function searchHandler(id) {
-  //   let found1 = characters.find((c) => c.id === Number(id));
-  //   if (!found1) {
-  //     fetch(`http://localhost:3001/rickandmorty/character/${id}`) // mi servidor
-  //       // fetch(`https://rickandmortyapi.com/api/character/${id}`) // la api de R&M
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         if (data.name) {
-  //           setCharacters((oldChars) => [data, ...oldChars]);
-  //         } else {
-  //           window.alert("No hay personajes con ese ID");
-  //         }
-  //       });
-  //   } else {
-  //     window.alert("El personaje ya fue agregado");
-  //   }
-  // }
 
   async function searchHandler(id) {
     try {
@@ -60,8 +47,6 @@ function App() {
   //!Aca deberia estar una funcion "login" que la vamos a eliminar para la hw de express
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-  // const username = "german@gmail.com";
-  // const password1 = "123456";
 
   //?hw de express(nuevo logini) copisteamos la funcinon q nos mandan en la hw
   function login(userData) {
@@ -79,28 +64,35 @@ function App() {
   }, [access]);
 
   return (
-    <>
-      <div className="App">
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route exact path="/" element={<Landing login={login} />} />
-          <Route
-            path="/home"
-            element={
-              <Home
-                characters={characters}
-                onClose={onClose}
-                onSearch={searchHandler}
+    <Authenticator>
+      {({ signOut, user }) => (
+        <main>
+          {/* <h1>Bienvenido! {user.username}</h1>
+          <button onClick={signOut}>Sign out</button> */}
+
+          <div className="App">
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route exact path="/" element={<Landing login={login} />} />
+              <Route
+                path="/home"
+                element={
+                  <Home
+                    characters={characters}
+                    onClose={onClose}
+                    onSearch={searchHandler}
+                  />
+                }
               />
-            }
-          />
-          <Route path="/detail/:id" element={<Detail />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/favorites" element={<Favorites />} />
-          {/* <Route path="*" element={<ErrorPage />} /> */}
-        </Routes>
-      </div>
-    </>
+              <Route path="/detail/:id" element={<Detail />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/favorites" element={<Favorites />} />
+              {/* <Route path="*" element={<ErrorPage />} /> */}
+            </Routes>
+          </div>
+        </main>
+      )}
+    </Authenticator>
   );
 }
 
